@@ -1,31 +1,28 @@
 #!/bin/bash
 
+echo
+echo
+echo
+echo "                     +::::::::::::::::::::::::::::::::::::::::::::::::::+ "
+echo "                     +             LiveEncryptedPersistence             + "
+echo "                     +::::::::::::::::::::::::::::::::::::::::::::::::::+ "
+echo "                     +     Live Encrypted Persistence For USB Device    + "
+echo "                     +::::::::::::::::::::::::::::::::::::::::::::::::::+ "
+echo "                     +             Creator : BL4CKH47H4CK3R             + "
+echo "                     +::::::::::::::::::::::::::::::::::::::::::::::::::+ "
+echo
+echo
+
 fdisk -l /dev/sdb
-
-echo "[*] Enter Device Name [\dev\sdb1, \dev\sdb2 etc]: "
-
-read usb
-
-echo "[*] Enter Distro Name [parrot, kali, ubuntu etc]: "
-
-read distro
-
-cryptsetup --verbose --verify-passphrase luksFormat $usb
-
+read -p "[*] Enter Device Name (e.g. \dev\sdb1, \dev\sdb2): " device
+read -p "[*] Enter Distro Name [e.g. parrot, kali, ubuntu): " distro
+cryptsetup --verbose --verify-passphrase luksFormat $device
 cryptsetup luksOpen $usb $distro
-
 mkfs.ext4 -L persistence /dev/mapper/$distro
-
 e2label /dev/mapper/$distro persistence
-
 mkdir -p /mnt/$distro
-
 mount /dev/mapper/$distro /mnt/$distro
-
 echo "/ union" > /mnt/$distro/persistence.conf
-
 umount /dev/mapper/$distro
-
 cryptsetup luksClose /dev/mapper/$distro
-
 reboot
