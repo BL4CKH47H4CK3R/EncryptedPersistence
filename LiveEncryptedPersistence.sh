@@ -15,7 +15,7 @@ echo
 
 fdisk -l /dev/sdb
 read -p "[*] Enter Device Name (e.g. \dev\sdb1, \dev\sdb2): " dev
-read -p "[*] Enter Distro Name [e.g. kali, parrot, ubuntu): " distro
+read -p "[*] Enter Distro Name (e.g. kali, parrot, ubuntu): " distro
 cryptsetup --verbose --verify-passphrase luksFormat $dev
 cryptsetup luksOpen $usb $distro
 mkfs.ext4 -L persistence /dev/mapper/$distro
