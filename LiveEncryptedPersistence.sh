@@ -6,7 +6,7 @@ echo
 echo "                     +::::::::::::::::::::::::::::::::::::::::::::::::::+ "
 echo "                     +             LiveEncryptedPersistence             + "
 echo "                     +::::::::::::::::::::::::::::::::::::::::::::::::::+ "
-echo "                     +     Live Encrypted Persistence For USB Device    + "
+echo "                     +      Encrypted Persistence For Linux Distro      + "
 echo "                     +::::::::::::::::::::::::::::::::::::::::::::::::::+ "
 echo "                     +             Creator : BL4CKH47H4CK3R             + "
 echo "                     +::::::::::::::::::::::::::::::::::::::::::::::::::+ "
