@@ -1,5 +1,5 @@
 # EncryptedPersistence
-Live Encrypted Persistence For USB Device
+Encrypted Persistence For Linux Distro
 
 # For Linux:
 ```
