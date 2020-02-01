@@ -4,7 +4,7 @@ echo
 echo
 echo
 echo "                     +::::::::::::::::::::::::::::::::::::::::::::::::::+ "
-echo "                     +             LiveEncryptedPersistence             + "
+echo "                     +               EncryptedPersistence               + "
 echo "                     +::::::::::::::::::::::::::::::::::::::::::::::::::+ "
 echo "                     +      Encrypted Persistence For Linux Distro      + "
 echo "                     +::::::::::::::::::::::::::::::::::::::::::::::::::+ "
