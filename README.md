@@ -1,4 +1,4 @@
-# LiveEncryptedPersistence
+# EncryptedPersistence
 Live Encrypted Persistence For USB Device
 
 # For Linux:
