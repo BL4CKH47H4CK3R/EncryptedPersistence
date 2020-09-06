@@ -20,7 +20,7 @@ read -p "[*] Enter Distro Name (e.g. arch, debian, kali): " distro
 echo
 cryptsetup --verbose --verify-passphrase luksFormat $dev
 cryptsetup luksOpen $usb $distro
-mkfs.btrfs -L persistence /dev/mapper/$distro
+mkfs.btrfs -L persistence -f /dev/mapper/$distro
 e2label /dev/mapper/$distro persistence
 mkdir -p /mnt/$distro
 mount /dev/mapper/$distro /mnt/$distro
